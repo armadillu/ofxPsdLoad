@@ -6,19 +6,15 @@
 //
 //
 
-#ifndef __BaseApp__ofxPsdLoad__
-#define __BaseApp__ofxPsdLoad__
+#pragma once
 
 #include "ofMain.h"
 
-class ofxPsdLoad{
+class ofxPsdLoad {
 
-public:
-	
-	static void loadPSD(string path, ofPixels & pixels);
-	static void loadPSD(string path, ofTexture & tex);
+  public:
+	static void loadPSD(const string &path, ofPixels &pixels);
+	static void loadPSD(const string &path, ofTexture &tex);
 	static void removeWhiteMatte(ofPixels &p);
-
 };
 
-#endif /* defined(__BaseApp__ofxPsdLoad__) */
