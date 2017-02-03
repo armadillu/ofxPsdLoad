@@ -24,7 +24,7 @@ void ofxPsdLoad::loadPSD(const string &filePath, ofPixels &pixels) {
 	pixels.allocate(w, h, comp);
 	memcpy(pixels.getData(), psdPix, w * h * comp);
 	removeWhiteMatte(pixels);
-	delete psdPix;
+	stbi_image_free(psdPix);
 }
 
 void ofxPsdLoad::loadPSD(const string &filePath, ofTexture &tex) {
